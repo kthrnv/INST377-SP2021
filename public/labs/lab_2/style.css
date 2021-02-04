@@ -14,13 +14,13 @@ body {
   width: 70%;
   min-width: 800px;
   margin: 0 auto;
-  background-color: #2c6cac;
+  background-color: #6091c3;
 }
 
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Cinzel Decorative', cursive;
   color: #2a2a2a;
 }
 
@@ -64,7 +64,7 @@ body > * {
   padding: 1%;
 }
 
-.main, .header, nav, .article, .aside, .footer, section {
+.main, .header, nav, .article, .aside, .footer, .section {
   background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
