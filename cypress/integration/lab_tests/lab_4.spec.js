@@ -129,22 +129,12 @@ describe('Lab 4', () => {
     cy.get('.flex-inner').should('have.css', 'align-items', 'center');
   });
 
-<<<<<<< HEAD
-  it('Should receive a string containing "Hello World" from the server - use res.send from Express docs for this', () => {
-    cy.fixture('test_values').then((json) => {
-      const labUrl = `${json.test_context || ''}labs/lab_4/`;
-      cy.visit(labUrl);
-      cy.get('button[type=submit]')
-        .click();
-      cy.contains('hello world', { matchCase: false });
-=======
   it('Your .flex-outer element should have a constrained width and reset padding to fit nicely on a screen', () => {
     cy.get('.flex-outer').should(($ul) => {
       const style = window.getComputedStyle($ul[0]);
       expect(style.marginLeft, 'Set your margin to zero').to.equal('0px');
       expect(style.marginLeft, 'Left margin should be the same as right').to.equal(style.marginRight);
       expect(style.marginTop, 'Top margin should be the same as bottom').to.equal(style.marginBottom);
->>>>>>> 41ea509353da98f5ad6797ff323e330e0e7128d5
     });
     cy.get('.flex-outer').should('have.css', 'max-width', '800px');
     cy.get('.flex-outer').should('have.css', 'padding', '0px 16px');
