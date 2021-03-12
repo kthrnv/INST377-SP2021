@@ -35,8 +35,10 @@ async function dataHandler(mapObjectFromFunction) {
       appendItem.classList.add('block');
       appendItem.classList.add('list-item');
       appendItem.innerHTML = `
-        <div class="list-header is-size-5">${item.name}</div>
-        <address class="is-size-six">${item.address_line_1}</address>`;
+        <div class="box">
+          <div class="list-header is-size-5">${item.name}</div>
+          <address class="is-size-six">${item.address_line_1}</address>
+        </div>`;
       targetList.append(appendItem);
     });
   });
