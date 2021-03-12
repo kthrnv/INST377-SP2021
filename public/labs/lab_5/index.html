@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katherine Vo's Lab 5</title>
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <!-- BULMA -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container is-max-desktop">
+        
+        <div class="columns">
+            <div class="column">
+                <h1>Katherine Vo's Lab 5</h1>
+                <h2>Zip Code Food Search</h2>
+                <form action='' id='search-form'>
+                    <div class='form-row'>
+                        <label for='search'>Search</label>
+                        <input id='search' name='search' type='text' placeholder="Enter Zipcode">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                <ul class="target-list"></ul>
+            </div>
+
+            <div class="column">
+                <div id="mapid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
