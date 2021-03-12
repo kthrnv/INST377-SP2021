@@ -25,8 +25,15 @@ async function dataHandler(mapObjectFromFunction) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const filtered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
+    const longfiltered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
+    filtered = longfiltered.slice(0, 5);
 
+    // Pans the map to the location of the first restaurant
+    const longLat = filtered[0].geocoded_column_1.coordinates;
+    const latlng = L.latLng(longLat[1], longLat[0]);
+    mapObjectFromFunction.panTo(latlng);
+
+    // Displays the selected restaurants in a list & plots those restaurant locations using markers
     filtered.forEach((item) => {
       const longLat = item.geocoded_column_1.coordinates;
       const marker = L.marker([longLat[1], longLat[0]]).addTo(mapObjectFromFunction);
