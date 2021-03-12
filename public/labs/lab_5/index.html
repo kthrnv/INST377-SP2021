@@ -21,27 +21,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        
-        <div class="columns">
-            <div class="column">
-                <h1 class="title is-3">Katherine Vo's Lab 5</h1>
-                <h2 class="subtitle is-5">Zip Code Food Search</h2>
-                <form action='' id='search-form'>
-                    <div class='form-row'>
-                        <label for='search'>Search</label>
-                        <input id='search' name='search' type='text' placeholder="Enter Zipcode">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-                <ul class="target-list"></ul>
-            </div>
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="columns is-full">
+                <div class="column is-half">
+                    <h1 class="title is-3">Katherine Vo's Lab 5</h1>
+                    <div class="subtitle is-5">Zip Code Food Search</div>
+                    <form action='' id='search-form'>
+                        <div class='block'>
+                            <label for='search'>Search</label>
+                            <input id='search' name='search' type='text' placeholder="Enter Zipcode">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <ul class="target-list"></ul>
+                </div>
 
-            <div class="column">
-                <div id="mapid"></div>
+                <div class="column is-half">
+                    <div class="box" id="mapid"></div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
