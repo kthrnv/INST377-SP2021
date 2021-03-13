@@ -18,6 +18,8 @@ async function dataHandler(mapObjectFromFunction) {
   const form = document.querySelector('#search-form');
   const search = document.querySelector('#search');
   const targetList = document.querySelector('.target-list');
+  
+  let flag = false;
 
   const request = await fetch('/api');
   const data = await request.json();
@@ -25,6 +27,16 @@ async function dataHandler(mapObjectFromFunction) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    if (flag) {
+      // Once the program has been ran at least once, this will remove the previous 
+      // five children before adding the next five
+      targetList.removeChild(targetList.lastChild);
+      targetList.removeChild(targetList.lastChild);
+      targetList.removeChild(targetList.lastChild);
+      targetList.removeChild(targetList.lastChild);
+      targetList.removeChild(targetList.lastChild);
+    }
+    
     const longfiltered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
     filtered = longfiltered.slice(0, 5);
 
@@ -48,6 +60,8 @@ async function dataHandler(mapObjectFromFunction) {
         </div>`;
       targetList.append(appendItem);
     });
+
+    flag = true;
   });
 }
 
