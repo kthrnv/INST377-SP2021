@@ -1,7 +1,9 @@
 body {
   background-color: #458fff;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .carousel {
